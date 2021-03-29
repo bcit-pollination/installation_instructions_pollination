@@ -1,4 +1,0 @@
----
-id: cryostat
-title: Cryostat
----

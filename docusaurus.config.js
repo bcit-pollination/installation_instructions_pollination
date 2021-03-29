@@ -2,26 +2,25 @@
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://github.com/bcit-pollination/',
+  baseUrl: '/installation_instructions_pollination/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Cryogenic Underground Testing Facility',
-  projectName: 'CUTE_hub documentation',
+  organizationName: 'bcit-pollination',
+  projectName: 'installation_instructions_pollination',
   themeConfig: {
     navbar: {
-      title: 'CUTE Docs',
+      title: 'Pollination system installation instructions',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.jpg',
       },
       items: [
 
-
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'CUTE HUB link here',
+          href: 'https://github.com/orgs/bcit-pollination/dashboard',
+          label: 'Pollination repos',
           position: 'right',
         },
       ],
