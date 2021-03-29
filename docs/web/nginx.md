@@ -17,8 +17,11 @@ To successfully complete this tutorial you need:
 * Ubuntu 20.04 ( while it may be possible to use other versions, this tutorial will only support 20.04 )
 * a registered custom domain
 * the registered custom domain is pointing to the ip address of the machine where we are installing nginx
+* unused 80, 443, 8080 ports
+* Common knowledge on the use of Github and Git
 
-## Installing NGINX
+## Procedures
+### Installing NGINX
 
 1. update the repository information
 ```shell
@@ -33,7 +36,7 @@ sudo apt-get install nginx
 nginx -v
 ```
 
-## Configure nginx to serve static files
+### Configure nginx to serve static files
 
 1. Create a configuration file
     ```shell
@@ -43,7 +46,11 @@ nginx -v
     ```shell
     sudo ln /etc/nginx/sites-available/<your domain name here> /etc/nginx/sites-enabled/<your domain name here>
     ```
-1. Paste the configuration contents into the file. 
+1. Paste the configuration contents into the file.
+   1. to open the file
+        ```shell
+        sudo nano /etc/nginx/sites-available/<your domain here>
+        ```
     :::note
        substitute &lt;your domain name here&gt; with your actual domain name
     :::
@@ -52,11 +59,15 @@ nginx -v
        The root value in the first line within the server block refers to the directory
     where you will place your static files
     :::
+    :::tip
+        Once you are done, you can press ctl+X to close the file, enter yes, then press enter. Your file will be saved 
+    :::
     ```
     server {
     
             root /var/www/<your domain name here>;
-    
+            listen 80;
+            listen [::]:80;
             index index.html index.htm index.nginx-debian.html;
     
             server_name <your domain name here> www.<your domain name here>;
@@ -86,9 +97,11 @@ nginx -v
     ```shell
     cd /var/www
     ```
-1. Clone the production website repository
+1. Fork this repository https://github.com/bcit-pollination/website_production_pollination
+   
+1. Clone the fork
    ```shell
-    sudo git clone https://github.com/bcit-pollination/website_production_pollination.git
+    sudo git clone <fork cloning link from github>
     ```
 1. Rename the repository 
    ```shell
@@ -106,16 +119,17 @@ nginx -v
    
     At this point, you have configured NGINX to serve static files, and act as a reverse proxy to serve 
    the swagger server API calls
-    :::note
-    At this moment HTTPS is not enabled, so you must use plain http to see your static files
-    :::
+   
+:::note
+At this moment HTTPS is not enabled, so you must use plain http to see your static files
+:::
 
-## Get an SSL certificate for your website
+### Get an SSL certificate for your website
 
 To get the SSL certificate we will use Let's Encrypt. Please follow the instructions at:
 https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
 
-## Basic nginx commands
+### Basic nginx commands
 * start
   ```shell
     sudo service nginx start
