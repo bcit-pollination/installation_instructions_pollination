@@ -10,7 +10,9 @@ In this tutorial you will:
 1. Create a virtual environment and learn how to activate and deactivate it
 1. Clone the web server repository and install requirements
 1. Get sendgrid API key
-1. export environment variables 
+1. export environment variables
+1. Configure the connection to the MySQL server
+1. Configure URL
 1. Run the web server
 
 ## Requirements
@@ -19,6 +21,7 @@ To successfully complete this tutorial you need:
 * Unused 8080 port
 * Common knowledge on the use of Github and Git
 * Sendgrid account and API key with the rights to send email
+* MySQL database has been setup
 
 ## Procedures
 
@@ -138,8 +141,7 @@ You have now correctly installed python
         export AUTH_SECRET=<your chosen secret here>
         export MAIL_SECRET=<your chosen secret here>
         export SENDGRID_API_KEY=<sendgrid's api key here>
-        export POLLINATION_SALT=<32 character long alpha-numeric string>
-   
+        export POLLINATION_URL=<your domain here>
 :::tip
 use this to open the file
 ```shell
@@ -149,7 +151,6 @@ use this to open the file
    
 :::note
 Each of the secrets should be at least 32 characters long, alpha-numeric
-The same applies to the salt 
 :::
 
 1. Execute the file
@@ -159,6 +160,65 @@ The same applies to the salt
 :::caution
 Note the dot
 :::
+
+
+### Configure the connection to MySQL
+
+1. Create configuration file
+   ```shell
+   touch ~/.my.cnf
+   ```
+
+1. Add config file contents
+
+
+      [client]
+      port=3306
+      host=localhost
+      database="voting_system"
+      user=server
+      password="<your MySQL user password here>"
+   
+      [mysql]
+      port=3306
+      host=localhost
+      database="voting_system"
+      user=server
+      password="<your MySQL user password here>"
+      
+      [mysqldump]
+      user=server
+      password="<your MySQL user password here>"
+
+:::tip
+use this to open the file
+```shell
+   nano ~/.my.cnf
+ ```
+:::
+
+
+### Configure URL
+
+1. Open the swagger API
+   ```shell
+   nano ~/web_server_pollination/server/swagger_server/swagger/swagger.yaml
+   ```
+
+1. Substitute in your domain name in line 15
+   ![img.png](../../static/img.png)
+   
+   Line 15 should now read:
+      - url: https://<your domain here>/api
+   
+
+You may then close the file
+
+1. Open the organization controller
+    ```shell
+   nano ~/web_server_pollination/server/src/endpoint
+   ```
+
 
 ### Run the server
 
