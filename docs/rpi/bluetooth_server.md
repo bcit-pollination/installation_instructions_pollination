@@ -51,6 +51,49 @@ mongo --version
 Make sure the version is <b>2.4.14.</b>
 :::
 
+4. Navigate to the root folder of your system.
+
+```shell
+cd /
+```
+
+5. Create a <b>data/db/</b> directory.
+
+```shell
+sudo mkdir data/db/
+```
+
+6. Start MongoDB service.
+
+```shell
+sudo service mongodb start
+```
+
+7. Confirm a <b>mongod.lock</b> file was created inside <b>data/db/</b>.
+
+```shell
+cd data/db
+```
+
+```shell
+ls
+```
+
+![MongoDB Lock File](../../static/img/mongo.png)
+
+8. Check for MongoDB connections.
+
+```shell
+sudo mongod
+```
+
+9. Enter the MongoDB shell and connect to the database.
+
+```shell
+mongo
+```
+
+
 ### 2. Installing Node JS
 
 1. To download and install newest version of Node.js, use the following command
@@ -133,7 +176,7 @@ Make sure the version is <b>2.9.10.</b>
 1. From the root directory, navigate to the touchingscreen_electron folder
 
 ```shell
-cd touchingscreen_electron
+cd touchscreen_electron
 ```
 
 2. Run the program
@@ -156,25 +199,25 @@ npm start
 
    ![Get Election List](../../static/img/click_get_election.png)
 
-   The application will generate the current Election List that the logged in organization have.
+   The application will generate the current Election List that the logged in organization has.
 
-4. Click on <b>"Download Election Package"</b>
+4. Click on <b>"Download Election Package"</b>.
 
    ![Election List](../../static/img/get_election.png)
 
-   The <b>"Usb List"</b> section will be displayed
+   The <b>"Usb List"</b> section will be displayed.
 
    ![USB List](../../static/img/usb_list.png)
 
-5. Plug your USB into the Raspberry Pi
+5. Plug your USB into the Raspberry Pi.
 
 6. Click on <b>"Refresh"</b> to have your USB path showed in the application.
 
    ![USB List](../../static/img/usb.png)
 
-7. Click on the USB path of your choosing to have the <i>Election Data</i> exported to
+7. Click on the USB path of your choosing to have the <i>Election Data</i> exported to.
 
-8. Click on <b>"Export Election Data"</b>
+8. Click on <b>"Export Election Data"</b>.
 
    ![Export Election Data](../../static/img/export_election_data.png)
 
@@ -182,11 +225,43 @@ npm start
 
    ![Encoded data](../../static/img/encode_data.png)
 
-10. Go back to the <b>Navigation Page</b>
+10. Open another terminal and enter the MongoDB shell to switch to the Pollination database.
 
-    ![Go back](../../static/img/go_back.png)
+   ```shell
+   mongo
+   ```
+
+   ```shell
+   use pollination
+   ```
+
+11. Go back to the <b>Navigation Page</b>.
+
+   ![Go back](../../static/img/go_back.png)
 
 #### Run Voting Server
+
+1. Click on <b>"Run Voting Server"</b>.
+
+2. Log in with the credentials and click <b>"Login(as Voting Pi)"</b>.
+
+3. Enter a location and click <b>"Submit"</b>.
+
+4. Click on <b>"Refresh"</b> to have your USB path showed in the application.
+
+5. Choose your USB with the exported Election Data saved on it.
+
+6. Click on <b>"Import Election Data"</b>.
+
+7. Click <b>"Start BLE Server"</b> to start the voting server. 
+
+Now, users will be able to vote on the Raspberry Pi touchscreen or connect to the Raspberry Pi on their mobile devices via Bluetooth. 
+
+:::tip
+For instructions on installing the iOS app: [iOS Instructions](../mobile_app/ios.md)
+
+For instructions on installing the Android app: [Android Instructions](../mobile_app/android.md)
+:::
 
 ## Troubleshooting
 
