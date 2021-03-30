@@ -146,11 +146,11 @@ npm start
 
 1. Click on <b>"Run Control Server"</b>.
 
-   ![Nav Page](./images/nav_page.png)
+   ![Nav Page](../../static/img/nav_page.png)
 
 2. Log in with the credentials and click <b>"Login"</b>.
 
-   ![Run Control Server Page](./images/run_control_server_page.png)
+   ![Run Control Server Page](../../static/img/run_control_server_page.png)
 
 3. After you are done logging in, click on <b>“Get Election List”</b>.
 
