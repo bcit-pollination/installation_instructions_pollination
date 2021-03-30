@@ -15,7 +15,7 @@ In this tutorial you will:
 
 To successfully complete this tutorial you will need:
 
-- a USB with enough space,
+- a USB with enough space and a name without spaces (ex: "USB", not "U SB"),
 - a Raspberry Pi with:
   - Raspbian OS
   - Bluetooth
@@ -154,7 +154,39 @@ npm start
 
 3. After you are done logging in, click on <b>“Get Election List”</b>.
 
+   ![Get Election List](../../static/img/click_get_election.png)
+
    The application will generate the current Election List that the logged in organization have.
+
+4. Click on <b>"Download Election Package"</b>
+
+   ![Election List](../../static/img/get_election.png)
+
+   The <b>"Usb List"</b> section will be displayed
+
+   ![USB List](../../static/img/usb_list.png)
+
+5. Plug your USB into the Raspberry Pi
+
+6. Click on <b>"Refresh"</b> to have your USB path showed in the application.
+
+   ![USB List](../../static/img/usb.png)
+
+7. Click on the USB path of your choosing to have the <i>Election Data</i> exported to
+
+8. Click on <b>"Export Election Data"</b>
+
+   ![Export Election Data](../../static/img/export_election_data.png)
+
+9. At this moment, you will see the Encoded Election Data exported to the root of your USB's root directory
+
+   ![Encoded data](../../static/img/encode_data.png)
+
+10. Go back to the <b>Navigation Page</b>
+
+    ![Go back](../../static/img/go_back.png)
+
+#### Run Voting Server
 
 ## Troubleshooting
 
