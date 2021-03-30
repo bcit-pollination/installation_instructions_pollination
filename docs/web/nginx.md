@@ -93,6 +93,8 @@ nginx -v
             }
     }
     ```
+   
+
 1. Move to the parent directory of the static file directory
     ```shell
     cd /var/www
@@ -128,6 +130,12 @@ At this moment HTTPS is not enabled, so you must use plain http to see your stat
 
 To get the SSL certificate we will use Let's Encrypt. Please follow the instructions at:
 https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx
+
+:::note
+If you want to do the SSL signing configuration yourself, please take a look at our production configuration file:
+
+[nginx config](../../static/files/nginx.config)
+:::
 
 ### Basic nginx commands
 * start

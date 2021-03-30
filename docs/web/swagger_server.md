@@ -209,7 +209,9 @@ use this to open the file
    ![img.png](../../static/img.png)
    
    Line 15 should now read:
-      - url: https://<your domain here>/api
+   
+      
+      - url: https://&lt;your domain here&gt;/api
    
 
 You may then close the file
