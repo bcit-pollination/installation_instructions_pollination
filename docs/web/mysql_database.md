@@ -5,7 +5,7 @@ title: MySQL Database installation instructions
 
 ## Overview
 
-This document will show you how to:
+In this tutorial you will:
 1. Install and starting MySQL server 8.0
 1. Generate required MySQL tables and stored procedures
 1. Set up MySQL database user
