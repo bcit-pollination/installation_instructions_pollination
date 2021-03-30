@@ -57,7 +57,9 @@ sudo apt-get install mysql-server
 
 7. Set a password for the root user
 
-8. MySQL server is now running
+8. Choose 'Strong Password Encryption'
+
+9. MySQL server is now running
 :::note
 You can start the server by running 
 `systemctl start mysql`
