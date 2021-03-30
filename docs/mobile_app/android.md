@@ -18,6 +18,8 @@ In this tutorial you will:
 * Basic knowledge of GitHub and Git
 * Android Studio installed
 * Access to the Internet
+* Android device
+* Android-based Lightning-to-USB cable
 
 ## Procedures
 
@@ -82,13 +84,13 @@ Disable USB-debugging if it is already enabled in order receive the RSA authenti
 
 4. Enable USB-debugging and press OK when prompted by the RSA authentication pop-up
 
-:::warning
-The adb (Android Debug Bridge) command from Android Studio must be run in the respective directory:  ``android_sdk/platform-tools/``
+:::note
+The adb (Android Debug Bridge) command from Android Studio must be run in the respective directory: ``android_sdk/platform-tools/``
 :::
 
 If you are on Windows, you can add the directory to the system environment PATH: ``C:\Users\<user>\AppData\Local\Android\Sdk\platform-tools``
 
-Doing so will allow you to run the adb command-line tool globally
+Doing so will allow you to run the adb command-line tool globally and forgo the previous note
 
 If you are on Ubuntu Linux, please follow the second step within the ``Set up a device for development`` section from this tutorial: https://developer.android.com/studio/run/device#setting-up
 
@@ -128,3 +130,6 @@ If you are getting an error regarding ``gradle``, you will need to open Android 
 After compilation and installation, the app should automatically open on your Android phone
 
 ### Run the app
+1. Begin voting by pressing ``Get Started``
+
+This marks the end of the installation instructions for Android devices
