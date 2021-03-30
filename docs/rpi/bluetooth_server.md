@@ -51,7 +51,7 @@ mongo --version
 Make sure the version is <b>2.4.14.</b>
 :::
 
-### 2. Installing Node js
+### 2. Installing Node JS
 
 1. To download and install newest version of Node.js, use the following command
 
@@ -75,10 +75,6 @@ node -v
 Make sure the version is <b>8.9.4.</b>
 :::
 
-:::tip Tip
-If required downgrading, please follow the steps inside https://www.surrealcms.com/blog/how-to-upgrade-or-downgrade-nodejs-using-npm.html to do so
-:::
-
 ### 3. Setting up your Bluetooth
 
 Enter the following commands to set up your Raspberry Pi's Bluetooth
@@ -99,9 +95,11 @@ At this stage, please <b>restart</b> your RPI
 Once restarted, make sure that your Bluetooth is turned <b>on</b>.
 :::
 
-### 4. Cloning the project
+## Getting Started
 
-1. Choose a directory of your choosing and clone the project at https://github.com/bcit-pollination/voting_station_pollination.git omto your Raspbian
+### 1. Cloning the project
+
+1. Choose a directory of your choosing and clone the project at https://github.com/bcit-pollination/voting_station_pollination.git onto your Raspbian
 
 ```shell
 git clone https://github.com/bcit-pollination/voting_station_pollination.git
@@ -117,6 +115,7 @@ cd voting_station_pollination/
 
 ```shell
 npm install
+pip install cryptography
 ```
 
 4. Check your mongoose version.
@@ -129,4 +128,36 @@ npm list | grep "mongoose"
 Make sure the version is <b>2.9.10.</b>
 :::
 
+### 2. Running the Electron Application
+
+1. From the root directory, navigate to the touchingscreen_electron folder
+
+```shell
+cd touchingscreen_electron
+```
+
+2. Run the program
+
+```shell
+npm start
+```
+
+#### Run Control Server
+
+1. Click on <b>"Run Control Server"</b>.
+
+   ![Nav Page](./images/nav_page.png)
+
+2. Log in with the credentials and click <b>"Login"</b>.
+
+   ![Run Control Server Page](./images/run_control_server_page.png)
+
+3. After you are done logging in, click on <b>“Get Election List”</b>.
+
+   The application will generate the current Election List that the logged in organization have.
+
 ## Troubleshooting
+
+### Incorrect Node JS version
+
+If required Upgrading or Downgrading, please follow the steps inside https://www.surrealcms.com/blog/how-to-upgrade-or-downgrade-nodejs-using-npm.html to do so
