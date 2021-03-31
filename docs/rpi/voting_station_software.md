@@ -72,7 +72,13 @@ sudo mkdir data/db/
 sudo service mongodb start
 ```
 
-7. Confirm a <b>mongod.lock</b> file was created inside <b>data/db/</b>.
+7. Check for MongoDB connections.
+
+```shell
+sudo mongod
+```
+
+8. Confirm a <b>mongod.lock</b> file was created inside <b>data/db/</b>.
 
 ```shell
 cd data/db/
@@ -82,17 +88,7 @@ cd data/db/
 ls
 ```
 
-:::note Note
-It may take a while for the files to show on terminal
-:::
-
 ![MongoDB Lock File](../../static/img/mongo.png)
-
-8. Check for MongoDB connections.
-
-```shell
-sudo mongod
-```
 
 ### Install Node JS
 
