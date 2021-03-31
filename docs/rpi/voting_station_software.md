@@ -198,33 +198,39 @@ npm start
 
    The application will generate the current Election List that the logged in organization has.
 
+   ![Election List](../../static/img/election_list.png)
+
 4. Select an election of your choosing, and click on <b>"Download Election Package"</b>.
 
    ![Election List](../../static/img/get_election.png)
-
-5. Click on <b>"Export"</b> to export the data onto your USB
-
-   ![Export](../../static/img/export.png)
 
    The <b>"Usb List"</b> section will be displayed.
 
    ![USB List](../../static/img/usb_list.png)
 
-6. Plug your USB into the Raspberry Pi.
+5. Plug your USB into the Raspberry Pi.
 
-7. Click on <b>"Refresh"</b> to have your USB path showed in the application.
+   :::important Important
+   Make sure you USB's name does not have space. (ex: "USB", not "U SB")
+   :::
+
+6. Click on <b>"Refresh"</b> to have your USB path showed in the application.
 
    ![USB List](../../static/img/usb.png)
 
-8. Click on the USB path of your choosing to have the <i>Election Data</i> exported to.
+7. Click on the USB path of your choosing to have the <i>Election Data</i> exported to.
 
-9. Click on <b>"Export Election Data"</b>.
+8. Click on <b>"Export Election Data"</b>.
 
    ![Export Election Data](../../static/img/export_election_data.png)
 
-10. At this moment, you will see the Encoded Election Data exported to the root of your USB
+9. At this moment, you will see the Encoded Election Data exported to the root of your USB
 
-    ![Encoded data](../../static/img/encode_data.png)
+   ![Encoded data](../../static/img/encode_data.png)
+
+:::note Note
+With every new Election Package you exported from an election, new Encoded Data will overwrite the old Encoded Data
+:::
 
 11. Open another terminal and enter the MongoDB shell to switch to the Pollination database.
 
@@ -246,17 +252,23 @@ use pollination
 
    ![Run Voting Server](../../static/img/run_voting_server.png)
 
-2. Log in with the credentials and click <b>"Login(as Voting Pi)"</b>.
+2. Log in with the same credentials and click <b>"Login(as Voting Pi)"</b>.
 
-3. Enter a location and click <b>"Submit"</b>.
+   ![Admin Credentials](../../static/img/voting_server.png)
 
-4. Click on <b>"Refresh"</b> to have your USB path showed in the application.
+3. Click on <b>"1. Identify USB"</b> to have your USB path showed in the application.
 
-5. Choose your USB with the exported Election Data saved on it.
+   ![Indetify USB](../../static/img/identify_usb.png)
 
-6. Click on <b>"Import Election Data"</b>.
+4. Choose your USB with the exported Election Data saved on it.
 
-7. Click <b>"Start BLE Server"</b> to start the voting server.
+5. Click on <b>"2. Import Election Data"</b>.
+
+   ![Import Election Data](../../static/img/import_election_data.png)
+
+6. Click <b>"Start BLE Server"</b> to start the voting server.
+
+   ![Start BLE Server](../../static/img/start_ble_server.png)
 
 Now, users will be able to vote on the Raspberry Pi touchscreen or connect to the Raspberry Pi on their mobile devices via Bluetooth.
 
@@ -265,6 +277,24 @@ For instructions on installing the iOS app: [iOS Instructions](../mobile_app/ios
 
 For instructions on installing the Android app: [Android Instructions](../mobile_app/android.md)
 :::
+
+## How to Post the Election Results
+
+1. Click on <b>"Run Control Server"</b>, and log in with the credentials.
+
+2. Click on <b>"Post Election Results"</b>
+
+   The Usb List section will be displayed.
+
+3. Click on <b>"Refresh"</b> and select the usb you want to import the vote results from
+
+4. Click on <b>"Import Vote Results"</b>.
+
+   An alert will appear saying that the import was successful. After pressing OK, the "Upload Election Results" button will be visible.
+
+5. Click on <b>"Upload Election Results"</b>
+
+   An alert will appear saying that the upload was successful, then you are done.
 
 ## Troubleshooting
 
