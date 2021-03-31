@@ -18,11 +18,7 @@ module.exports = {
             type: 'category',
             label: 'RPI',
             items: [
-                'rpi/bluetooth_server',
-                'rpi/data_transfer_utility',
-                'rpi/rpi_database',
-                'rpi/http_server',
-                'rpi/ui',
+                'rpi/voting_station_software',
             ],
         },
         {
