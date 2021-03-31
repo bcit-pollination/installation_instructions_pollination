@@ -211,7 +211,7 @@ npm start
 5. Plug your USB into the Raspberry Pi.
 
    :::important Important
-   Make sure you USB's name does not have space. (ex: "USB", not "U SB")
+   Make sure you USB's name does <b>not</b> have space. (ex: "USB", not "U SB")
    :::
 
 6. Click on <b>"Refresh"</b> to have your USB path showed in the application.
@@ -264,6 +264,8 @@ use pollination
 
 5. Click on <b>"2. Import Election Data"</b>.
 
+   An alert will appear saying that the Election Package was successfully imported, press <b>OK</b>.
+
    ![Import Election Data](../../static/img/import_election_data.png)
 
 6. Click <b>"Start BLE Server"</b> to start the voting server.
@@ -282,17 +284,27 @@ For instructions on installing the Android app: [Android Instructions](../mobile
 
 1. Click on <b>"Run Control Server"</b>, and log in with the credentials.
 
+   ![Run Control Server]![Nav Page](../../static/img/nav_page.png)
+
 2. Click on <b>"Post Election Results"</b>
+
+   ![Post Election](../../static/img/post_election.png)
 
    The Usb List section will be displayed.
 
 3. Click on <b>"Refresh"</b> and select the usb you want to import the vote results from
 
+   ![Usb List](../../static/img/post_usb_list.png)
+
 4. Click on <b>"Import Vote Results"</b>.
 
-   An alert will appear saying that the import was successful. After pressing OK, the "Upload Election Results" button will be visible.
+   ![Import Vote Results](../../static/img/import_vote_results.png)
+
+   An alert will appear saying that the import was successful. After pressing <b>OK</b>, the <b>"Upload Election Results"</b> button will be visible.
 
 5. Click on <b>"Upload Election Results"</b>
+
+   ![Upload Election Results](../../static/img/upload_election_results.png)
 
    An alert will appear saying that the upload was successful, then you are done.
 
