@@ -268,9 +268,23 @@ use pollination
 
    ![Import Election Data](../../static/img/import_election_data.png)
 
-6. Click <b>"Start BLE Server"</b> to start the voting server.
+6. Enter your Verifier Password to start the BLE Server, and press <b>"Submit Verifier Password"</b>.
 
-   ![Start BLE Server](../../static/img/start_ble_server.png)
+   An alert will appear saying that the verification was successful, press <b>OK</b>.
+
+   ![Verifier](../../static/img/verifier.png)
+
+7. Enter the polling station's location, and press <b>"Submit"</b>.
+
+   ![Location](../../static/img/location.png)
+
+8. Click <b>"Start BLE Server"</b> to start the voting server.
+
+   ![Start BLE Server](../../static/img/start_BLE_server.png)
+
+   At this moment, touchscreen voter is allowed to enter their voting <b>token</b> to be granted with the permission to vote by the Verifier.
+
+   ![Token](../../static/img/token.png)
 
 Now, users will be able to vote on the Raspberry Pi touchscreen or connect to the Raspberry Pi on their mobile devices via Bluetooth.
 
@@ -279,6 +293,32 @@ For instructions on installing the iOS app: [iOS Instructions](../mobile_app/ios
 
 For instructions on installing the Android app: [Android Instructions](../mobile_app/android.md)
 :::
+
+### Voting on Touchscreen
+
+1. Once the touchscreen voter has finished with their voting, press <b>"Submit Vote"</b>.
+
+   ![Touchscreen voting](../../static/img/submit_vote.png)
+
+2. The Verifier then click <b>"End Vote"</b> to export the vote data
+
+   ![End Vote](../../static/img/vote.png)
+
+3. The Verifier is then required to enter their password in order to proceed to exporting. Once entered, press <b>"Submit Verifier Password"</b>.
+
+   ![Verififer Password](../../static/img/submit_verifier_pass.png)
+
+   The USB list will then be visible.
+
+4. Click on <b>"show USB Devices"</b> and select the USB you want to export the vote data to
+
+   ![USB List](../../static/img/usb_devices.png)
+
+5. Click on <b>"Export Vote Data"</b>.
+
+   ![Export Vote Results](../../static/img/export_vote_data.png)
+
+   At this moment, you can then proceed onto posting the Election Results.
 
 ## How to Post the Election Results
 
@@ -290,11 +330,11 @@ For instructions on installing the Android app: [Android Instructions](../mobile
 
    ![Post Election](../../static/img/post_election.png)
 
-   The Usb List section will be displayed.
+   The USB List section will be displayed.
 
-3. Click on <b>"Refresh"</b> and select the usb you want to import the vote results from
+3. Click on <b>"Refresh"</b> and select the USB you want to import the vote results from
 
-   ![Usb List](../../static/img/post_usb_list.png)
+   ![USB List](../../static/img/post_usb_list.png)
 
 4. Click on <b>"Import Vote Results"</b>.
 
