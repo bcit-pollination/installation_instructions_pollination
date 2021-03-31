@@ -1,15 +1,18 @@
 ---
-id: bluetooth_server
-title: Bluetooth server installation instructions
+id: voting_station_software
+title: Voting Station Software installation instructions
 ---
 
 ## Overview
 
 In this tutorial you will:
 
-- clone the Pollination Voting Station for Raspberri Pi (RPI) GitHub repository,
-- install required dependencies and packages, and
-- build and run the Pollination Voting Station application on your RPI with Electron, MongoDB.
+- Install MongoDB
+- Install NodeJS
+- Prepare your RPI voting station to use bluetooth
+- Install the RPI voting station software
+- Understand how to use the RPI voting station software
+
 
 ## Requirements
 
@@ -23,10 +26,9 @@ To successfully complete this tutorial you will need:
   - Mongo version <b>2.4.14</b>
   - Python 3
 - a touchscreen (<i>optional</i>).
+## Procedures
 
-## Setup
-
-### 1. Installing MongoDB
+### Install MongoDB
 
 1. Update your machine
 
@@ -94,7 +96,7 @@ mongo
 ```
 
 
-### 2. Installing Node JS
+### Install Node JS
 
 1. To download and install newest version of Node.js, use the following command
 
@@ -118,7 +120,7 @@ node -v
 Make sure the version is <b>8.9.4.</b>
 :::
 
-### 3. Setting up your Bluetooth
+### Prepare RPI voting station to use bluetooth
 
 Enter the following commands to set up your Raspberry Pi's Bluetooth
 
@@ -138,9 +140,7 @@ At this stage, please <b>restart</b> your RPI
 Once restarted, make sure that your Bluetooth is turned <b>on</b>.
 :::
 
-## Getting Started
-
-### 1. Cloning the project
+### Install the RPI voting station software
 
 1. Choose a directory of your choosing and clone the project at https://github.com/bcit-pollination/voting_station_pollination.git onto your Raspbian
 
@@ -171,9 +171,11 @@ npm list | grep "mongoose"
 Make sure the version is <b>2.9.10.</b>
 :::
 
-### 2. Running the Electron Application
+### How to use the RPI voting station software
 
-1. From the root directory, navigate to the touchingscreen_electron folder
+#### Running the graphical interface
+
+1. From the root directory, navigate to the touchscreen_electron folder
 
 ```shell
 cd touchscreen_electron
