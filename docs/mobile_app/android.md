@@ -49,6 +49,11 @@ Alternatively, you can use ``nvm`` (Node Version Manager) to update your node ve
 npm install
 ```
 
+6. Install the React Native CLI
+```shell
+npm install -g react-native-cli
+```
+
 ### Connect your Android phone to your computer using an Android-based Lightning-to-USB cable
 1. Connect your Android phone to your computer using an Android-based Lightning-to-USB cable
 
@@ -109,7 +114,7 @@ List of devices attached
 <device_serial> authorized
 ```
 
-If instead it lists your device as unauthorized, then something went wrong.
+If instead it lists your device as unauthorized, then something went wrong
 
 More details can be found here: https://developer.android.com/studio/run/device
 
@@ -131,5 +136,15 @@ After compilation and installation, the app should automatically open on your An
 
 ### Run the app
 1. Begin voting by pressing ``Get Started``
+
+2. Register for an account by pressing the respective button
+
+3. Once finished with registration, return to the previous screen and press the ``Sign In`` button
+
+4. Log in using your newly-created account's credentials
+
+:::note
+The Home Screen will show active and scheduled elections that your account is eligible for (this process is determined through the web application)
+:::
 
 This marks the end of the installation instructions for Android devices
